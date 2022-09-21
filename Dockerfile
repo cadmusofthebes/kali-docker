@@ -1,3 +1,7 @@
+# Pull latest docker kali image
+FROM kalilinux/kali-rolling:latest
+
+# Set variable to make this all non-interactive (no prompts)
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Run all system updates and installs
