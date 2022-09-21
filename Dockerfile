@@ -8,6 +8,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 RUN apt-get dist-upgrade -y
 RUN apt install -y wget kali-linux-headless
+RUN apt-get install gcc-multilib python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+RUN python3 -m pip install --upgrade pip
+RUN python3 -m pip install --upgrade pwntools
 
 # Setup a kali user with the password of kali
 RUN useradd -m -p "saHz2oQLytbl2" "kali"
