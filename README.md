@@ -13,5 +13,5 @@ docker build -t <image name> .
 
 4\. Create the container
 ```bash
-docker run -p 3390:3390 --expose=3390 -v ~/<local>/<mount>:/mnt/<docker folder> --name <image name> --security-opt seccomp=unconfined --cap-add=net_admin --device=/dev/net/tun -it kalilinux/kali-rolling /bin/bash
+docker run -p 3390:3390 --expose=3390 -v ~/<local>/<mount>:/mnt/<docker folder> --name <image name> --security-opt seccomp=unconfined --cap-add=net_admin --device=/dev/net/tun -it <image name from step 3> /bin/bash
 ```
