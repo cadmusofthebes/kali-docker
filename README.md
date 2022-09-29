@@ -1,5 +1,7 @@
 # Overview
-This is a dockerfile that can be used to build a Kali image that is fully updated, has the metapackages, and RDP configured automatically
+This is a dockerfile that can be used to build a Kali image that is fully updated, has the metapackages, and RDP configured automatically.
+
+Note that using this does require some understanding of Docker and how images and containers work. If you are unfamiliar, see [this](https://www.youtube.com/watch?v=pTFZFxd4hOI) video
 <br>
 
 -----
