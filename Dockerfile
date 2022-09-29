@@ -11,6 +11,7 @@ RUN apt install -y wget kali-linux-headless
 
 # Setup a kali user with the password of kali
 RUN useradd -m -p "saHz2oQLytbl2" "kali"
+RUN usermod -aG sudo kali
 
 # Setup xrdp
 RUN apt-get install -y kali-desktop-xfce xorg xrdp
