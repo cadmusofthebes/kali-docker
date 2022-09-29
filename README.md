@@ -16,12 +16,12 @@ docker build -t <desired image name> .
 4\. Create the container. You can view the [docker documentation](https://docs.docker.com/) for details on what each switch does.
 - From a nix system
 ```bash
-docker run -p 3390:3390 --expose=3390 -v ~/<local>/<folder>/<to>/<mount>:/mnt/<folder on docker to access host folder from> --name <desired container name> --security-opt seccomp=unconfined --cap-add=net_admin --device=/dev/net/tun -it <image name from step 3> /bin/bash
+docker run -p 3390:3390 --expose=3390 -v ~/<local folder to mount within the container>:/mnt/<folder on docker to access host folder from> --name <desired container name> --security-opt seccomp=unconfined --cap-add=net_admin --device=/dev/net/tun -it <image name from step 3> /bin/bash
 ```
 
 - From Windows
 ```powershell
-docker run -p 3390:3390 --expose=3390 -v c:\<local>\<folder>\<to>\<mount>:\mnt\<folder on docker to access host folder from> --name <desired container name> --security-opt seccomp=unconfined --cap-add=net_admin --device=/dev/net/tun -it <image name from step 3> /bin/bash
+docker run -p 3390:3390 --expose=3390 -v c:\<local folder to mount within the container>:\mnt\<folder on docker to access host folder from> --name <desired container name> --security-opt seccomp=unconfined --cap-add=net_admin --device=/dev/net/tun -it <image name from step 3> /bin/bash
 ```
 <br>
 
