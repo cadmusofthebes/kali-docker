@@ -24,9 +24,10 @@ docker run -p 3390:3390 --expose=3390 -v ~/<local>/<mount>:/mnt/<docker folder> 
 ## XRDP Doesn't work
 \- Make sure you are RDPing into your docker container over 127.0.0.1:3390 and not the IP of the docker container.
 
-\- Login to the docker container and view ``/var/log/xrdp.log``. I have seen cases where you sometimes just need to start/stop it to get it working again as it sometimes gets hung at startup
-
+\- Sometimes just need to start/stop it to get it working again as it gets hung at startup
 ```bash
 /etc/init.d/xrdp stop
 /etc/init.d/xrdp start
 ```
+
+\- View ``/var/log/xrdp.log`` for messages and clues
