@@ -7,7 +7,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 # Run all system updates and installs
 RUN apt-get update
 RUN apt-get dist-upgrade -y
-RUN apt install -y wget kali-linux-headless
+RUN apt install -y wget kali-linux-headless dbus-x11
 
 # Setup a kali user with the password of kali
 RUN useradd -m -p "saHz2oQLytbl2" "kali"
